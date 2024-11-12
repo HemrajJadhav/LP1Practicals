@@ -1,0 +1,48 @@
+﻿Start 🡪 Microsoft Visual Studio 2010 🡪 New 🡪 Project 🡪  
+Start 🡪 Microsoft Visual Studio 2010 🡪 New 🡪 Project 🡪 Class Library
+  
+
+Start 🡪 Microsoft Visual Studio 2010 🡪 New 🡪 Project 🡪 Class Library 🡪Give name as “ClassLibrary1” 🡪 OK 
+Write following code 
+Public Class MyFunctions 
+Public Function AddMyValues(ByVal Value1 As 
+Double, ByVal Value2 As Double) 
+ Dim Result As Double 
+ Result = Value1 + Value2 
+ Return Result 
+ End Function 
+End Class
+  
+
+Save and Build the solution 🡪 DLL is created  (ClassLibrary1.dll) 🡪 at the path  
+(“C:\Users\Gurukul\Documents\Visual Studio  
+2010\Projects\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1 .dll”) 
+As shown in following image
+  
+
+Create New Application 🡪 
+Start 🡪 Microsoft Visual Studio 2010 🡪 New 🡪 Project 🡪 Give Project name as “WindowsApplication5” 🡪 Design the  following form
+  
+
+Solution Explorer 🡪 right click on Project Name 🡪 Add  References 🡪
+  
+
+Add the “ClassLibrary1.dll” file 🡪 
+(this file is stored at the path – 
+“C:\Users\Gurukul\Documents\Visual Studio  2010\Projects\ClassLibrary1\ClassLibrary1\bin\Debug”)  
+(this path may vary from computer to computer)
+  
+
+Write the following code in “WindowsApplication5” project 
+Imports ClassLibrary1 
+Public Class Form1 
+ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click 
+ Dim Obj As New ClassLibrary1.MyFunctions 
+ TextBox3.Text = Obj.AddMyValues(CDbl(TextBox1.Text),  CDbl(TextBox2.Text)).ToString 
+ End Sub 
+End Class 
+Run the application 
+Save All 🡪 Build 🡪 Build Solution 🡪 Run
+  
+
+Output will be displayed 🡪
